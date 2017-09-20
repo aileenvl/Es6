@@ -44,3 +44,52 @@ let {firstName: Name, lastName: LastName} = retrieveObject();
 
 console.log('Name is ' + Name);
 console.log('LastName is '+ LastName);
+
+
+ /*********************
+  *  DEFAULT PARAMETERS
+  *********************/
+
+// Usual handle of default values
+let doSomething = function(name) {
+    name = name || 'Aileen';
+    return name;
+};
+
+console.log('Usual Default parameter ' + doSomething());
+
+//With ES6 default parameter only assigns with undefined value
+let doSomethingEs6 = function(name = 'Aileen') {
+    return name;
+}
+
+console.log('ES6 Default parameter ' + doSomething());
+
+ /*********************
+  *  REST PARAMETERS
+  *********************/
+
+//Rest parameter takes arguments to build an array
+let sum = function(name, ...numbers) {
+    let result = 0;
+    numbers.forEach(function(n) {
+        result += n;
+    });
+    return result;
+}
+
+let result = sum('Aileen', 1,2,3);
+
+console.log('Rest parameter result is 6 ' + result);
+
+ /*********************
+  *  SPREAD OPERATOR
+  *********************/
+
+  //can build arrays by embeding
+
+  let a = [4,5,6];
+  let b = [1,2,3,...a,7,8,9];
+
+
+  console.log('Should build an array from 1 to 9 ' + b);
