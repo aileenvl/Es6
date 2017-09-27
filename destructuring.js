@@ -93,3 +93,22 @@ console.log('Rest parameter result is 6 ' + result);
 
 
   console.log('Should build an array from 1 to 9 ' + b);
+
+   /*********************
+  * TEMPLATE LITERALS
+  *********************/
+
+  // Usual concatenation
+
+  let category = 'comedy';
+  let id = 1711;
+
+  let url = 'http://coolmovies/' + category + '/' + id;
+
+  //Replace concatenation with placeholders
+
+  let genre = 'Alternative';
+  let id = 1117;
+
+  let url = `http://coolmusic/${genre}/${id}`;
+
